@@ -9,6 +9,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y git \
      cmake \
+     wget \
      libcryptopp-dev \
      libleveldb-dev \
      libjsoncpp-dev \
