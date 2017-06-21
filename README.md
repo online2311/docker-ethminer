@@ -17,8 +17,8 @@ nvidia-docker run -it anthonytatowicz/eth-cuda-miner ARG1 ARG2 ...
 
 # Example
 nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
--S us-west1.nanopool.org:9999 \
--O 0x20ad58fe023265577565c7eb44b55c31e7497c33.cSquared/ajtatowicz@gmail.com
+-S eth.f2pool.com:8008 \
+-O 0xA28d0439Daa02b64f0fCf16541e7CDCD2facb691.ZhangJing/13821320100@outlook.com
 ```
 
 **Note** --farm-recheck and -U are set by default
@@ -34,7 +34,7 @@ CUDA kernel ported from Tim Hughes' OpenCL kernel
 With contributions from nicehash, nerdralph, RoBiK and sp_ 
 
 Please consider a donation to:
-ETH: 0xeb9310b185455f863f526dab3d245809f6854b4d
+ETH: 0xA28d0439Daa02b64f0fCf16541e7CDCD2facb691
 
 Usage ethminer [OPTIONS]
 Options:
