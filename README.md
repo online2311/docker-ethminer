@@ -13,10 +13,10 @@ Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 
 ### How to run
 ```
-nvidia-docker run -it anthonytatowicz/eth-cuda-miner ARG1 ARG2 ...
+nvidia-docker run -it online2311/docker-ethminer ARG1 ARG2 ...
 
 # Example
-nvidia-docker run -it anthonytatowicz/eth-cuda-miner \
+nvidia-docker run -it online2311/docker-ethminer \
 -S eth.f2pool.com:8008 \
 -O 0xA28d0439Daa02b64f0fCf16541e7CDCD2facb691.ZhangJing/13821320100@outlook.com
 ```
