@@ -17,8 +17,8 @@ nvidia-docker run -it online2311/docker-ethminer ARG1 ARG2 ...
 
 # Example
 nvidia-docker run -it online2311/docker-ethminer \
--S eth.f2pool.com:8008 \
--O 0xA28d0439Daa02b64f0fCf16541e7CDCD2facb691.ZhangJing/13821320100@outlook.com
+-S eth.f2pool.com:8008 -SP 1 -L sequential \
+-O 0xA28d0439Daa02b64f0fCf16541e7CDCD2facb691.ZhangJing
 ```
 
 **Note** --farm-recheck and -U are set by default
