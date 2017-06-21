@@ -29,7 +29,9 @@ RUN git clone https://github.com/Genoil/cpp-ethereum/ \
     && cd build \
     && cmake -DBUNDLE=cudaminer .. \
     && make -j8
-
+    
+WORKDIR /bbr
+RUN wget -N --no-check-certificate https://raw.githubusercontent.com/online2311/docker-ethminer/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh
 
 ENV GPU_FORCE_64BIT_PTR=0
 ENV GPU_MAX_HEAP_SIZE=100
