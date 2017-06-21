@@ -1,5 +1,5 @@
 FROM nvidia/cuda:8.0-devel-ubuntu16.04
-
+MAINTAINER ZhangJing "13821320100@outlook.com"
 
 WORKDIR /
 
@@ -30,9 +30,8 @@ RUN git clone https://github.com/Genoil/cpp-ethereum/ \
     && cmake -DBUNDLE=cudaminer .. \
     && make -j8
 
-WORKDIR /tmp
 COPY bbr.sh /tmp/bbr.sh
-RUN chmod +x bbr.sh && bash bbr.sh
+RUN chmod +x /tmp/bbr.sh && bash /tmp/bbr.sh
 
 ENV GPU_FORCE_64BIT_PTR=0
 ENV GPU_MAX_HEAP_SIZE=100
