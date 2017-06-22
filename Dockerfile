@@ -3,6 +3,9 @@ MAINTAINER ZhangJing "13821320100@outlook.com"
 
 WORKDIR /
 
+COPY bbr.sh /root/bbr.sh
+RUN chmod +x /root/bbr.sh && bash /root/bbr.sh && rm /root/bbr.sh
+
 RUN apt-get update \
     && apt-get -y install software-properties-common \
     && add-apt-repository -y ppa:ethereum/ethereum -y \
@@ -30,8 +33,6 @@ RUN git clone https://github.com/Genoil/cpp-ethereum/ \
     && cmake -DBUNDLE=cudaminer .. \
     && make -j8
 
-COPY bbr.sh /tmp/bbr.sh
-RUN chmod +x /tmp/bbr.sh && bash /tmp/bbr.sh
 
 ENV GPU_FORCE_64BIT_PTR=0
 ENV GPU_MAX_HEAP_SIZE=100
