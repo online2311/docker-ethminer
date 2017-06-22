@@ -1,5 +1,6 @@
 FROM nvidia/cuda:8.0-devel-ubuntu16.04
-MAINTAINER ZhangJing "13821320100@outlook.com"
+
+MAINTAINER ZhangJing
 
 WORKDIR /
 
