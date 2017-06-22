@@ -3,9 +3,6 @@ MAINTAINER ZhangJing "13821320100@outlook.com"
 
 WORKDIR /
 
-COPY bbr.sh /root/bbr.sh
-RUN chmod +x /root/bbr.sh && bash /root/bbr.sh && rm /root/bbr.sh
-
 RUN apt-get update \
     && apt-get -y install software-properties-common \
     && add-apt-repository -y ppa:ethereum/ethereum -y \
