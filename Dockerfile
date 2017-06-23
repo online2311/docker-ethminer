@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-devel-ubuntu16.04
+FROM nvidia/cuda:8.0-runtime-ubuntu16.04
 
 WORKDIR /
 
@@ -22,7 +22,7 @@ RUN apt-get update \
      libmicrohttpd-dev \
      build-essential
 
-RUN git clone -b 110 https://github.com/Genoil/cpp-ethereum \
+RUN git clone https://github.com/Genoil/cpp-ethereum/ \
     && cd cpp-ethereum \
     && mkdir build \
     && cd build \
