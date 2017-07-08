@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-runtime-ubuntu16.04
+FROM nvidia/cuda:8.0-devel-ubuntu16.04
 
 WORKDIR /
 
@@ -27,7 +27,7 @@ RUN git clone https://github.com/Genoil/cpp-ethereum/ \
     && mkdir build \
     && cd build \
     && cmake -DBUNDLE=cudaminer .. \
-    && make -j8
+    && make -j4
 
 
 ENV GPU_FORCE_64BIT_PTR=0
